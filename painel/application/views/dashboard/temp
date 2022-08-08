@@ -1,0 +1,492 @@
+<div class="row">
+            <div class="col-md-9">
+                <!-- WIDGET NO HEADER -->
+                <div class="widget widget-hide-header">
+                    <div class="widget-header hide">
+                        <h3>Summary Info</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="row">
+                            <div class="col-md-3" style="display: table;height: 160px;">
+                                <p style="vertical-align: middle; display: table-cell"><img src="<?php echo base_url('recursos/imagens/logos/thumb12.png'); ?>"  alt="Logo da Empresa" style="max-width: 160px; max-height: 80px;" /></p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="easy-pie-chart green" data-percent="70">
+                                    <span class="percent">70</span>
+                                </div>
+                                <p class="text-center">Task Completion</p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="easy-pie-chart red" data-percent="22">
+                                    <span class="percent">22</span>
+                                </div>
+                                <p class="text-center">Overall Project Completion</p>
+                            </div>
+                            <!-- ATALHO BUTTON -->
+                            <div class="col-md-3">
+                                    <h3><i class="fa fa-square"></i> Atalhos</h3>
+                                    <p>
+                                        <button type="button" class="btn btn-info">Meu Perfil</button>
+                                    </p>
+                                    <p>
+                                        <button type="button" class="btn btn-success">Listar Orçamentos</button>
+                                    </p>
+                                <p>
+                                       <button type="button" class="btn btn-warning">Fluxo de Caixa</button>
+                                    </p>
+                            </div>
+                            <!-- END ATALHO BUTTON -->
+                        </div>
+                    </div>
+                </div>
+                <!-- WIDGET NO HEADER -->
+            </div>
+            <div class="col-md-3">
+                <!-- WIDGET REMINDER -->
+                <div class="widget widget-hide-header widget-reminder">
+                    <div class="widget-header hide">
+                        <h3>Lembretes do Dia</h3>
+                    </div>
+                    <div class="widget-content">
+                        <div class="today-reminder">
+                            <h4 class="reminder-title">Reunião</h4>
+                            <p class="reminder-time"><i class="fa fa-clock-o"></i> 9:00 AM</p>
+                            <p class="reminder-place">Salão Principal</p>
+                            <em class="reminder-notes">Trazer anotações</em>
+                            <i class="fa fa-bell"></i>
+                            <div class="btn-group btn-group-xs">
+                                <!--														<button type="button" class="btn btn-warning"><i class="fa fa-cloud-upload"></i> Sync</button>-->
+                                <div class="btn-group  btn-group-xs">
+                                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Me lembrar depois
+                                        <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="#">em 15 minutos</a>
+                                        </li>
+                                        <li><a href="#">em 30 minutos</a>
+                                        </li>
+                                        <li><a href="#">em 1 hora</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END WIDGET REMINDER -->
+            </div>
+        </div>
+
+        <!-- WIDGET MAIN CHART WITH TABBED CONTENT -->
+        <div class="widget">
+            <div class="widget-header">
+                <h3><i class="fa fa-bar-chart-o"></i> Faturamento</h3>
+                <em>- Receitas, Despesas lançadas</em>
+                <button type="button" class="btn btn-link btn-help"><i class="fa fa-question-circle"></i>
+                </button>
+                <div class="btn-group widget-header-toolbar">
+                   <a href="#" id="tour-focus" title="Focus" class="btn-borderless btn-focus"><i class="fa fa-eye"></i></a>
+                   <a href="#" title="Expand/Collapse" class="btn-borderless btn-toggle-expand"><i class="fa fa-chevron-up"></i></a>
+                   <a href="#" title="Remove" class="btn-borderless btn-remove"><i class="fa fa-times"></i></a>
+            </div>
+        </div>
+            <div class="widget-content">
+                <!-- chart tab nav -->
+                <div class="chart-nav">
+                    <strong>Selecione o Período:</strong>
+                    <ul id="sales-stat-tab">
+                        <li class="active"><a href="#week">Semanal</a>
+                        </li>
+                        <li><a href="#month">Mensal</a>
+                        </li>
+                        <li><a href="#year">Anual</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end chart tab nav -->
+
+                <!-- chart placeholder-->
+                <div class="chart-content">
+                    <div class="demo-flot-chart sales-chart"></div>
+                </div>
+                <!-- end chart placeholder-->
+                <hr class="separator">
+                <!-- secondary stat -->
+                <div class="secondary-stat">
+                    <div class="row">
+                       <div class="col-lg-4">
+                            <div id="secondary-stat-item1" class="secondary-stat-item big-number-stat clearfix">
+                                <div class="data">
+                                    <span class="col-left big-number">260</span>
+        							<span class="col-right">
+        							<em>Despesas</em>
+        							<em>3% <i class="fa fa-caret-down"></i></em>
+        							</span>
+                                </div>
+                                <div id="spark-stat1" class="inlinesparkline">Loading...</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div id="secondary-stat-item2" class="secondary-stat-item big-number-stat clearfix">
+                                <p class="data">
+                                    <span class="col-left big-number">$23,000</span>
+        															<span class="col-right">
+        																<em>Receitas</em>
+        																<em>5% <i class="fa fa-caret-up"></i>
+                                                                        </em>
+        															</span>
+                                </p>
+                                <div id="spark-stat2" class="inlinesparkline">Loading...</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div id="secondary-stat-item3" class="secondary-stat-item big-number-stat clearfix">
+                                <p class="data">
+                                    <span class="col-left big-number">$47,000</span>
+        															<span class="col-right">
+        																<em>Total</em>
+        																<em>7% <i class="fa fa-caret-up"></i>
+                                                                        </em>
+        															</span>
+                                </p>
+                                <div id="spark-stat3" class="inlinesparkline">Loading...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end secondary stat -->
+            </div>
+        </div>
+        <!-- END WIDGET MAIN CHART WITH TABBED CONTENT -->
+
+        <div class="row">
+        <div class="col-md-6">
+            <!-- WIDGET TABLE -->
+            <div class="widget widget-table">
+                <div class="widget-header">
+                    <h3><i class="fa fa-desktop"></i> Browser &amp; OS</h3>
+                    <div class="btn-group widget-header-toolbar">
+                        <a href="#" title="Focus" class="btn-borderless btn-focus"><i class="fa fa-eye"></i></a>
+                        <a href="#" title="Expand/Collapse" class="btn-borderless btn-toggle-expand"><i class="fa fa-chevron-up"></i></a>
+                        <a href="#" title="Remove" class="btn-borderless btn-remove"><i class="fa fa-times"></i></a>
+                    </div>
+                    <div class="btn-group widget-header-toolbar">
+
+                       <div class="control-inline toolbar-item-group">
+                            <span class="control-title">New Visits:</span>
+                            <div class="label label-success"><i class="fa fa-caret-up"></i> 3.5%</div>
+                        </div>
+                    </div>
+
+               </div>
+                <div class="widget-content">
+                    <table id="visit-stat-table" class="table table-sorting table-striped table-hover datatable" cellpadding="0" cellspacing="0" width="100%">
+
+                       <thead>
+                        <tr>
+                            <th>Browser</th>
+                            <th>Operating System</th>
+                            <th>Visits</th>
+                            <th>New Visits</th>
+                        </tr>
+                        </thead>
+
+                       <tbody>
+                        <tr>
+                            <td>Chrome</td>
+                            <td>Macintosh</td>
+
+                           <td>360</td>
+                            <td>82.78%</td>
+                        </tr>
+                        <tr>
+                            <td>Chrome</td>
+                            <td>Windows</td>
+
+                           <td>582</td>
+                            <td>87.24%</td>
+                        </tr>
+                        <tr>
+                            <td>Chrome</td>
+                            <td>Linux</td>
+                            <td>172</td>
+                            <td>45.21%</td>
+                        </tr>
+                        <tr>
+                            <td>Chrome</td>
+
+                           <td>iOS</td>
+                            <td>86</td>
+                            <td>35.23%</td>
+                        </tr>
+                        <tr>
+
+                           <td>Firefox</td>
+                            <td>Windows</td>
+                            <td>280</td>
+                            <td>63.12%</td>
+                        </tr>
+                        <tr>
+                            <td>Firefox</td>
+                            <td>Android</td>
+                            <td>236</td>
+                            <td>58.02%</td>
+                        </tr>
+                        <tr>
+                            <td>Internet Explorer</td>
+                            <td>Windows</td>
+
+                           <td>145</td>
+                            <td>45.23%</td>
+                        </tr>
+                        <tr>
+                            <td>Safari</td>
+
+                           <td>Macintosh</td>
+                            <td>103</td>
+                            <td>22.12%</td>
+
+                       </tr>
+                        <tr>
+                            <td>Safari</td>
+                            <td>iOS</td>
+                            <td>302</td>
+
+                           <td>56.98%</td>
+                        </tr>
+
+                       <tr>
+                            <td>Opera</td>
+                            <td>Windows</td>
+                            <td>328</td>
+                            <td>67.12%</td>
+                        </tr>
+
+                       <tr>
+                            <td>Opera</td>
+                           <td>Macintosh</td>
+                            <td>22</td>
+                            <td>87.21%</td>
+                        </tr>
+                        <tr>
+
+                           <td>Chrome</td>
+                            <td>iOS</td>
+                            <td>45</td>
+                            <td>23.21%</td>
+                        </tr>
+
+                       <tr>
+                            <td>Firefox</td>
+                            <td>Windows</td>
+                            <td>67</td>
+                            <td>27.11%</td>
+
+                       </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- END WIDGET TABLE -->
+        </div>
+
+        <div class="col-md-6">
+
+
+
+            <!-- WIDGET INLINE SPARKLINE -->
+
+            <div class="widget widget-sparkline">
+
+                <div class="widget-header">
+
+                    <h3><i class="fa fa-bar-chart-o"></i> Visits Stat</h3>
+
+                    <em>- Sparkline Charts With Random Data</em>
+
+                    <div class="btn-group widget-header-toolbar">
+
+                        <a href="#" title="Focus" class="btn-borderless btn-focus"><i class="fa fa-eye"></i></a>
+
+                        <a href="#" title="Expand/Collapse" class="btn-borderless btn-toggle-expand"><i class="fa fa-chevron-up"></i></a>
+
+                        <a href="#" title="Remove" class="btn-borderless btn-remove"><i class="fa fa-times"></i></a>
+
+                    </div>
+
+                </div>
+
+                <div class="widget-content">
+
+                    <div class="row first">
+
+                        <div class="col-md-6">
+
+                            <div class="sparkline-stat-item">
+
+                                <div class="info">
+
+                                    <span>Visits</span>
+
+                                    <strong>1,363</strong>
+
+                                </div>
+
+                                <span id="sparkline1" class="inlinesparkline">Loading...</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="sparkline-stat-item">
+
+                                <div class="info">
+
+                                    <span>Unique Visitors</span>
+
+                                    <strong>1,221</strong>
+
+                                </div>
+
+                                <span id="sparkline2" class="inlinesparkline">Loading...</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="sparkline-stat-item last">
+
+                                <div class="info">
+
+                                    <span>Page Views</span>
+
+                                    <strong>2,300</strong>
+
+                                </div>
+
+                                <span id="sparkline3" class="inlinesparkline">Loading...</span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-6">
+
+                            <div class="sparkline-stat-item">
+
+                                <div class="info">
+
+                                    <span>Pages/Visit</span>
+
+                                    <strong>1.19</strong>
+
+                                </div>
+
+                                <span id="sparkline4" class="inlinesparkline">Loading...</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="sparkline-stat-item">
+
+                                <div class="info">
+
+                                    <span>Avg. Visit Duration</span>
+
+                                    <strong>00:00:30</strong>
+
+                                </div>
+
+                                <span id="sparkline5" class="inlinesparkline">Loading...</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <div class="sparkline-stat-item last">
+
+                                <div class="info">
+
+                                    <span>% New Visits</span>
+
+                                    <strong>28.35%</strong>
+
+                                </div>
+
+                                <span id="sparkline6" class="inlinesparkline">Loading...</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- END WIDGET INLINE SPARKLINE -->
+
+        </div>
+
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+
+
+            </div>
+
+            <div class="col-md-8">
+
+                <!-- WIDGET REAL-TIME CHART -->
+
+                <div class="widget real-time-chart">
+
+                    <div class="widget-header">
+
+                        <h3><i class="fa fa-cogs"></i> CPU Load</h3>
+
+                        <em>- Realtime chart</em>
+
+                        <div class="btn-group widget-header-toolbar">
+
+                            <a href="#" title="Focus" class="btn-borderless btn-focus"><i class="fa fa-eye"></i></a>
+
+                            <a href="#" title="Expand/Collapse" class="btn-borderless btn-toggle-expand"><i class="fa fa-chevron-up"></i></a>
+
+                            <a href="#" title="Remove" class="btn-borderless btn-remove"><i class="fa fa-times"></i></a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="widget-content">
+
+                        <div class="demo-flot-chart" id="demo-real-time-chart"></div>
+
+                    </div>
+
+                </div>
+
+                <!-- END WIDGET REAL-TIME CHART -->
+
+            </div>
+
+        </div> 
